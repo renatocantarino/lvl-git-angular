@@ -1,0 +1,20 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3"> https://api.github.com/users/</span>
+    </div>
+    <input type="text" class="form-control" id="basic-url"
+    [(ngModel)]="nomeUsuario" id="nomeUsuario"  name="nomeUsuario"
+                    aria-describedby="basic-addon3">
+
+
+    <button type="button" (click)="Repos()"   class="btn btn-primary mr-1 ml-2">Repos</button>
+    <button type="button" (click)="Starred()"  class="btn btn-success">Starred</button>
+
+  </div>
+
+  <ul class="list-group">
+    <li  class="list-group-item" *ngFor="let item of repositorioDTO; let i = index">
+      {{item}}
+    </li>
+
+  </ul>
